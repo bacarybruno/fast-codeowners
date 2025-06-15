@@ -1,3 +1,3 @@
-# `@napi-rs/package-template-android-arm-eabi`
+# `fast-codeowners-android-arm-eabi`
 
-This is the **armv7-linux-androideabi** binary for `@napi-rs/package-template`
+This is the **armv7-linux-androideabi** binary for `fast-codeowners`
