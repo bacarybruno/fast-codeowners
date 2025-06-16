@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Template project for writing node package with napi-rs",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": "git@github.com:bacarybruno/fast-codeowners.git",
   "license": "MIT",
   "keywords": [

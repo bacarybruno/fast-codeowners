@@ -1,19 +1,20 @@
 import { Bench } from 'tinybench'
+import JSCodeowners from 'codeowners'
 
-import { plus100 } from '../index.js'
+import { Codeowners as NativeCodeowners } from '../index.js'
 
-function add(a: number) {
-  return a + 100
-}
-
-const b = new Bench()
-
-b.add('Native a + 100', () => {
-  plus100(10)
+const b = new Bench({
+  name: 'Check codeowners',
 })
 
-b.add('JavaScript a + 100', () => {
-  add(10)
+b.add('fast-codeowners', () => {
+  const codeowners = new NativeCodeowners()
+  codeowners.getOwners('index.ts')
+})
+
+b.add('codeowners (npm', () => {
+  const codeowners = new JSCodeowners()
+  codeowners.getOwner('index.ts')
 })
 
 await b.run()
