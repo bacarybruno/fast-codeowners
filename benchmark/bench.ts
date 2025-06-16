@@ -12,7 +12,7 @@ b.add('fast-codeowners', () => {
   codeowners.getOwners('index.ts')
 })
 
-b.add('codeowners (npm', () => {
+b.add('codeowners (npm)', () => {
   const codeowners = new JSCodeowners()
   codeowners.getOwner('index.ts')
 })

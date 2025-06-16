@@ -7,15 +7,15 @@ Based on [https://github.com/hmarr/codeowners-rs](https://github.com/hmarr/codeo
 ![https://github.com/bacarybruno/fast-codeowners/actions](https://github.com/bacarybruno/fast-codeowners/workflows/CI/badge.svg)
 
 ### Benchmark
-Compared to the popular [codeowners npm package](https://www.npmjs.com/package/codeowners) npm package `fast-codeowners` performs `13.5x` faster in throughput benchmarks.
-- fast-codeowners: 37,011 ops/sec
-- codeowners (npm): 2,740 ops/sec
+Compared to the popular [codeowners npm package](https://www.npmjs.com/package/codeowners) npm package `fast-codeowners` performs around `14x` faster in throughput benchmarks.
+- fast-codeowners: 38k ops/sec
+- codeowners (npm): 2,7k ops/sec
 
 ```
-┌─────────┬───────────────────┬──────────────────┬──────────────────┬────────────────────────┬────────────────────────┬─────────┐
-│ (index) │ Task name         │ Latency avg (ns) │ Latency med (ns) │ Throughput avg (ops/s) │ Throughput med (ops/s) │ Samples │
-├─────────┼───────────────────┼──────────────────┼──────────────────┼────────────────────────┼────────────────────────┼─────────┤
-│ 0       │ 'fast-codeowners' │ '27791 ± 0.30%'  │ '26666 ± 1749.0' │ '37011 ± 0.13%'        │ '37501 ± 2499'         │ 35983   │
-│ 1       │ 'codeowners (npm' │ '367847 ± 0.38%' │ '358917 ± 11292' │ '2740 ± 0.30%'         │ '2786 ± 88'            │ 2719    │
-└─────────┴───────────────────┴──────────────────┴──────────────────┴────────────────────────┴────────────────────────┴─────────┘
+┌─────────┬────────────────────┬──────────────────┬──────────────────┬────────────────────────┬────────────────────────┬─────────┐
+│ (index) │ Task name          │ Latency avg (ns) │ Latency med (ns) │ Throughput avg (ops/s) │ Throughput med (ops/s) │ Samples │
+├─────────┼────────────────────┼──────────────────┼──────────────────┼────────────────────────┼────────────────────────┼─────────┤
+│ 0       │ 'fast-codeowners'  │ '27102 ± 0.28%'  │ '26250 ± 1583.0' │ '37716 ± 0.12%'        │ '38095 ± 2309'         │ 36898   │
+│ 1       │ 'codeowners (npm)' │ '376665 ± 0.53%' │ '361250 ± 12542' │ '2692 ± 0.39%'         │ '2768 ± 97'            │ 2655    │
+└─────────┴────────────────────┴──────────────────┴──────────────────┴────────────────────────┴────────────────────────┴─────────┘
 ```
